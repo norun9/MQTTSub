@@ -19,7 +19,7 @@ def on_disconnect(client, userdata, rc):
 
 
 def on_message(client, userdata, msg):
-    print("Received message" + str(msg.payload) + "on topic" + msg.topic)
+    print(msg.payload.decode())
 
 
 def signal_handler(sig, frame):
@@ -36,6 +36,6 @@ client.on_connect = on_connect
 client.on_disconnect = on_disconnect
 client.on_message = on_message
 
-client.connect("150.65.230.59", 1883, keepalive=60)
+client.connect("150.65.230.59")
 
 client.loop_forever()
