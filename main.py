@@ -5,11 +5,6 @@ import sys
 
 def on_connect(client, userdata, flag, rc):
     print("Completed connection to broker")
-    # client.subscribe("i483/sensors/s2410014/BMP180/temperature")
-    # client.subscribe("i483/sensors/s2410014/BMP180/air_pressure")
-    # client.subscribe("i483/sensors/s2410014/SCD41/temperature")
-    # client.subscribe("i483/sensors/s2410014/SCD41/co2")
-    # client.subscribe("i483/sensors/s2410014/SCD41/humidity")
     client.subscribe("i483/sensors/s2410014/#")
 
 
