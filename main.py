@@ -14,7 +14,7 @@ def on_disconnect(client, userdata, rc):
 
 
 def on_message(client, userdata, msg):
-    print(msg.payload.decode())
+    print(msg.topic, msg.payload.decode())
 
 
 def signal_handler(sig, frame):
